@@ -15,7 +15,7 @@ jobs:
       - run: ls
       - run: apk update 
       
-      - run: python --version
+      - run: python3 --version
       
       - run: pip --version
       - run: pip install -r requirements.txt
