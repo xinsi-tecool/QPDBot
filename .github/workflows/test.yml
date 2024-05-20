@@ -1,11 +1,11 @@
 name: test
 
-on: [push, pull_request] # 触发事件
+on: [push] # 触发事件
 
 jobs:
   build-bin:
     runs-on: ubuntu-latest
     container: alpine:latest
     steps:
-      - run: apk update & apk add python3 py3-pip & python --version & pip --version
+      - run: apk update & apk add python3 & python --version & py3-pip & pip --version
   
