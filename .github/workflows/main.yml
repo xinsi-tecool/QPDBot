@@ -1,6 +1,6 @@
 name: build docker image and push aliyun
 
-on: [push, pull_request] # 触发事件
+on: [] # 触发事件
 
 jobs:
   build-bin:
