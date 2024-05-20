@@ -21,10 +21,7 @@ jobs:
           docker run --rm -v ${GITHUB_WORKSPACE}:/app alpine:latest \
             apk add python3 py3-pip
             pip3 install pyinstaller
+            ls
             pyinstaller --onefile --name QPDBot main.py
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: QPDBot
-          path: dist/QPDBot
+      
