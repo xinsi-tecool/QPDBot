@@ -8,12 +8,15 @@ jobs:
     container: alpine:latest
     steps:
       - uses: actions/checkout@v2
-      - run: su
+      - uses: actions/setup-python@v2 # THIS IS IMPORTANT
+        with:
+          python-version: '3.10'
+      
       - run: ls
       - run: apk update 
-      - run: apk add python3
+      
       - run: python --version
-      - run: apk add py3-pip
+      
       - run: pip --version
       - run: pip install -r requirements.txt
       - run: pip install pyinstaller
