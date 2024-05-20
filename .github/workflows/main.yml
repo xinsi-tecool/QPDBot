@@ -8,8 +8,6 @@ jobs:
     container: alpine:latest
     steps:
       - uses: actions/checkout@v2
-      - run: ls
-      - run: cd QPDBot
       - run: apk update 
       - run: apk add python3
       - run: python --version
