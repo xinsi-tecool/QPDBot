@@ -7,8 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     container: alpine:latest
     steps:
+      - uses: actions/checkout@v2
       - run: apk update 
       - run: apk add python3
       - run: python --version
       - run: apk add py3-pip
       - run: pip --version
+      - run: pip install -r requirements.txt
+      - run: pip install pyinstaller
+      - run: pyinstaller main.py
+      - run: ls
