@@ -10,5 +10,5 @@ jobs:
       - run: apk update 
       - run: apk add python3
       - run: python --version
-      - run: apd add py3-pip
+      - run: apk add py3-pip
       - run: pip --version
