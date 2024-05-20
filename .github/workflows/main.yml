@@ -4,8 +4,7 @@ on: push # 触发事件
 
 jobs:
   build-bin:
-    runs-on: ubuntu-latest
-    container: alpine:latest
+    runs-on: alpine-latest
     steps:
       - uses: actions/checkout@v2
       - run: su
